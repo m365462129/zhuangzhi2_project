@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using HedgehogTeam.EasyTouch;
 
 public class FenZiManager : MonoBehaviour
 {
@@ -18,7 +19,7 @@ public class FenZiManager : MonoBehaviour
 
     public float AutoRotateTime = 5f;
     public float TotalTime = 0;
-    public int curWindowIndex = -1;
+    private int curJingtuoIndex = 0;
     private void Awake()
     {
         _instance = this;
@@ -30,31 +31,10 @@ public class FenZiManager : MonoBehaviour
             if (target != null)
             {
                 targetList.Add(target);
-                //if (targetDic.ContainsKey(target.Id))
-                //{
-                //    Debug.LogError("已经包含：" + target.transform.name);
-                //}
-                //else
-                //{
-                //    Debug.LogError("新增：" + target.Id);
-                //    targetDic.Add(target.Id, target);
-                //}
             }
         }
 
         targetList = targetList.OrderBy(a => a.Id).ToList(); ;
-
-
-
-        for (int i = 0; i < targetList.Count; i++)
-        {
-            if (targetList[i].Id == 0)
-            {
-                SetCameraPos(targetList[0].CameraPosition);
-            }
-            
-        }
-
 
     }
 
@@ -80,35 +60,58 @@ public class FenZiManager : MonoBehaviour
         {
             Debug.LogError("====");
             TotalTime = 0;
-            curWindowIndex++;
-            //if (curWindowIndex >= targetDic.Count)
-            //{
-            //    curWindowIndex = 0;
-            //}
-            //if (targetDic.ContainsKey(curWindowIndex))
-            //{
-            //    Target tmp = targetDic[curWindowIndex];
-            //    ThirdPersonCamera.Instance.SetTargetPos(tmp.CameraPosition);
-            //}
-            if (curWindowIndex >= targetList.Count)
+            curJingtuoIndex++;
+            if (curJingtuoIndex >2)
             {
-                curWindowIndex = 0;
+                curJingtuoIndex = 0;
+                
             }
-            for (int i = 0; i < targetList.Count; i++)
-            {
-                if (targetList[i].Id == curWindowIndex)
-                {
-                    SetCameraPos(targetList[i].CameraPosition);
-                }
-            }
+            CameraManager.Instance.ToJingTuo(curJingtuoIndex);
         }
     }
 
-
-    public void SetCameraPos(Vector3 pos)
+    private void ResetTotalTime()
     {
-        ThirdPersonCamera.Instance.SetTargetPos(pos);
+
     }
+
+
+    private void OnEnable()
+    {
+        EasyTouch.On_SwipeEnd += On_SwipeEnd;
+    }
+
+    private void OnDisable()
+    {
+        EasyTouch.On_SwipeEnd -= On_SwipeEnd;
+    }
+
+    private void On_SwipeEnd(Gesture gesture)
+    {
+        Debug.LogError("gesture.swipe=" + gesture.swipe);
+
+        switch (gesture.swipe)
+        {
+            case EasyTouch.SwipeDirection.Left:
+            case EasyTouch.SwipeDirection.Up:
+            case EasyTouch.SwipeDirection.UpLeft:
+            case EasyTouch.SwipeDirection.DownLeft:
+                curJingtuoIndex--;
+                if (curJingtuoIndex<0) curJingtuoIndex = 2;
+                break;
+
+            case EasyTouch.SwipeDirection.Right:
+            case EasyTouch.SwipeDirection.Down:
+            case EasyTouch.SwipeDirection.DownRight:
+            case EasyTouch.SwipeDirection.UpRight:
+                curJingtuoIndex++;
+                if (curJingtuoIndex >2) curJingtuoIndex = 0;
+                break;
+        }
+        TotalTime = 0;
+        CameraManager.Instance.ToJingTuo(curJingtuoIndex);
+    }
+
 
 
 }
