@@ -1,0 +1,1029 @@
+fileFormatVersion: 2
+guid: f722d8a68a836594bbdb107c87f7d8e3
+timeCreated: 1559098503
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: rectBlocks_0
+    21300002: rectBlocks_1
+    21300004: rectBlocks_2
+    21300006: rectBlocks_3
+    21300008: rectBlocks_4
+    21300010: rectBlocks_5
+    21300012: rectBlocks_6
+    21300014: rectBlocks_7
+    21300016: rectBlocks_8
+    21300018: rectBlocks_9
+    21300020: rectBlocks_10
+    21300022: rectBlocks_11
+    21300024: rectBlocks_12
+    21300026: rectBlocks_13
+    21300028: rectBlocks_14
+    21300030: rectBlocks_15
+    21300032: rectBlocks_16
+    21300034: rectBlocks_17
+    21300036: rectBlocks_18
+    21300038: rectBlocks_19
+    21300040: rectBlocks_20
+    21300042: rectBlocks_21
+    21300044: rectBlocks_22
+    21300046: rectBlocks_23
+    21300048: rectBlocks_24
+    21300050: rectBlocks_25
+    21300052: rectBlocks_26
+    21300054: rectBlocks_27
+    21300056: rectBlocks_28
+    21300058: rectBlocks_29
+    21300060: rectBlocks_30
+    21300062: rectBlocks_31
+    21300064: rectBlocks_32
+    21300066: rectBlocks_33
+    21300068: rectBlocks_34
+    21300070: rectBlocks_35
+    21300072: rectBlocks_36
+    21300074: rectBlocks_37
+    21300076: rectBlocks_38
+    21300078: rectBlocks_39
+    21300080: rectBlocks_40
+    21300082: rectBlocks_41
+    21300084: rectBlocks_42
+    21300086: rectBlocks_43
+    21300088: rectBlocks_44
+    21300090: rectBlocks_45
+    21300092: rectBlocks_46
+    21300094: rectBlocks_47
+    21300096: rectBlocks_48
+    21300098: rectBlocks_49
+    21300100: rectBlocks_50
+    21300102: rectBlocks_51
+    21300104: rectBlocks_52
+    21300106: rectBlocks_53
+    21300108: rectBlocks_54
+    21300110: rectBlocks_55
+    21300112: rectBlocks_56
+    21300114: rectBlocks_57
+    21300116: rectBlocks_58
+    21300118: rectBlocks_59
+    21300120: rectBlocks_60
+    21300122: rectBlocks_61
+    21300124: rectBlocks_62
+    21300126: rectBlocks_63
+    21300128: rectBlocks_64
+    21300130: rectBlocks_65
+    21300132: rectBlocks_66
+    21300134: rectBlocks_67
+    21300136: rectBlocks_68
+    21300138: rectBlocks_69
+    21300140: rectBlocks_70
+    21300142: rectBlocks_71
+    21300144: rectBlocks_72
+    21300146: rectBlocks_73
+    21300148: rectBlocks_74
+    21300150: rectBlocks_75
+    21300152: rectBlocks_76
+    21300154: rectBlocks_77
+    21300156: rectBlocks_78
+    21300158: rectBlocks_79
+    21300160: rectBlocks_80
+    21300162: rectBlocks_81
+    21300164: rectBlocks_82
+    21300166: rectBlocks_83
+    21300168: rectBlocks_84
+    21300170: rectBlocks_85
+    21300172: rectBlocks_86
+    21300174: rectBlocks_87
+    21300176: rectBlocks_88
+    21300178: rectBlocks_89
+    21300180: rectBlocks_90
+    21300182: rectBlocks_91
+    21300184: rectBlocks_92
+    21300186: rectBlocks_93
+    21300188: rectBlocks_94
+    21300190: rectBlocks_95
+    21300192: rectBlocks_96
+    21300194: rectBlocks_97
+    21300196: rectBlocks_98
+    21300198: rectBlocks_99
+    21300200: rectBlocks_100
+    21300202: rectBlocks_101
+    21300204: rectBlocks_102
+    21300206: rectBlocks_103
+    21300208: rectBlocks_104
+    21300210: rectBlocks_105
+    21300212: rectBlocks_106
+    21300214: rectBlocks_107
+    21300216: rectBlocks_108
+    21300218: rectBlocks_109
+    21300220: rectBlocks_110
+    21300222: rectBlocks_111
+    21300224: rectBlocks_112
+    21300226: rectBlocks_113
+    21300228: rectBlocks_114
+    21300230: rectBlocks_115
+    21300232: rectBlocks_116
+    21300234: rectBlocks_117
+    21300236: rectBlocks_118
+    21300238: rectBlocks_119
+    21300240: rectBlocks_120
+    21300242: rectBlocks_121
+    21300244: rectBlocks_122
+    21300246: rectBlocks_123
+    21300248: rectBlocks_124
+    21300250: rectBlocks_125
+    21300252: rectBlocks_126
+    21300254: rectBlocks_127
+    21300256: rectBlocks_128
+    21300258: rectBlocks_129
+    21300260: rectBlocks_130
+    21300262: rectBlocks_131
+    21300264: rectBlocks_132
+    21300266: rectBlocks_133
+    21300268: rectBlocks_134
+    21300270: rectBlocks_135
+    21300272: rectBlocks_136
+    21300274: rectBlocks_137
+    21300276: rectBlocks_138
+    21300278: rectBlocks_139
+    21300280: rectBlocks_140
+    21300282: rectBlocks_141
+    21300284: rectBlocks_142
+    21300286: rectBlocks_143
+    21300288: rectBlocks_144
+    21300290: rectBlocks_145
+    21300292: rectBlocks_146
+    21300294: rectBlocks_147
+    21300296: rectBlocks_148
+    21300298: rectBlocks_149
+    21300300: rectBlocks_150
+    21300302: rectBlocks_151
+    21300304: rectBlocks_152
+    21300306: rectBlocks_153
+    21300308: rectBlocks_154
+    21300310: rectBlocks_155
+    21300312: rectBlocks_156
+    21300314: rectBlocks_157
+    21300316: rectBlocks_158
+    21300318: rectBlocks_159
+    21300320: rectBlocks_160
+    21300322: rectBlocks_161
+    21300324: rectBlocks_162
+    21300326: rectBlocks_163
+    21300328: rectBlocks_164
+    21300330: rectBlocks_165
+    21300332: rectBlocks_166
+    21300334: rectBlocks_167
+    21300336: rectBlocks_168
+    21300338: rectBlocks_169
+    21300340: rectBlocks_170
+    21300342: rectBlocks_171
+    21300344: rectBlocks_172
+    21300346: rectBlocks_173
+    21300348: rectBlocks_174
+    21300350: rectBlocks_175
+    21300352: rectBlocks_176
+    21300354: rectBlocks_177
+    21300356: rectBlocks_178
+    21300358: rectBlocks_179
+    21300360: rectBlocks_180
+    21300362: rectBlocks_181
+    21300364: rectBlocks_182
+    21300366: rectBlocks_183
+    21300368: rectBlocks_184
+    21300370: rectBlocks_185
+    21300372: rectBlocks_186
+    21300374: rectBlocks_187
+    21300376: rectBlocks_188
+    21300378: rectBlocks_189
+    21300380: rectBlocks_190
+    21300382: rectBlocks_191
+    21300384: rectBlocks_192
+    21300386: rectBlocks_193
+    21300388: rectBlocks_194
+    21300390: rectBlocks_195
+    21300392: rectBlocks_196
+    21300394: rectBlocks_197
+    21300396: rectBlocks_198
+    21300398: rectBlocks_199
+    21300400: rectBlocks_200
+    21300402: rectBlocks_201
+    21300404: rectBlocks_202
+    21300406: rectBlocks_203
+    21300408: rectBlocks_204
+    21300410: rectBlocks_205
+    21300412: rectBlocks_206
+    21300414: rectBlocks_207
+    21300416: rectBlocks_208
+    21300418: rectBlocks_209
+    21300420: rectBlocks_210
+    21300422: rectBlocks_211
+    21300424: rectBlocks_212
+    21300426: rectBlocks_213
+    21300428: rectBlocks_214
+    21300430: rectBlocks_215
+    21300432: rectBlocks_216
+    21300434: rectBlocks_217
+    21300436: rectBlocks_218
+    21300438: rectBlocks_219
+    21300440: rectBlocks_220
+    21300442: rectBlocks_221
+    21300444: rectBlocks_222
+    21300446: rectBlocks_223
+    21300448: rectBlocks_224
+    21300450: rectBlocks_225
+    21300452: rectBlocks_226
+    21300454: rectBlocks_227
+    21300456: rectBlocks_228
+    21300458: rectBlocks_229
+    21300460: rectBlocks_230
+    21300462: rectBlocks_231
+    21300464: rectBlocks_232
+    21300466: rectBlocks_233
+    21300468: rectBlocks_234
+    21300470: rectBlocks_235
+    21300472: rectBlocks_236
+    21300474: rectBlocks_237
+    21300476: rectBlocks_238
+    21300478: rectBlocks_239
+    21300480: rectBlocks_240
+    21300482: rectBlocks_241
+    21300484: rectBlocks_242
+    21300486: rectBlocks_243
+    21300488: rectBlocks_244
+    21300490: rectBlocks_245
+    21300492: rectBlocks_246
+    21300494: rectBlocks_247
+    21300496: rectBlocks_248
+    21300498: rectBlocks_249
+    21300500: rectBlocks_250
+    21300502: rectBlocks_251
+    21300504: rectBlocks_252
+    21300506: rectBlocks_253
+    21300508: rectBlocks_254
+    21300510: rectBlocks_255
+    21300512: rectBlocks_256
+    21300514: rectBlocks_257
+    21300516: rectBlocks_258
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: rectBlocks_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 874
+        width: 120
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rectBlocks_1
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 874
+        width: 120
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rectBlocks_2
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 874
+        width: 120
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rectBlocks_3
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 874
+        width: 120
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rectBlocks_4
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 874
+        width: 120
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rectBlocks_5
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 874
+        width: 120
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rectBlocks_6
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 874
+        width: 120
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rectBlocks_7
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 874
+        width: 120
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rectBlocks_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 724
+        width: 120
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rectBlocks_9
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 724
+        width: 120
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rectBlocks_10
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 724
+        width: 120
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rectBlocks_11
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 724
+        width: 120
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rectBlocks_12
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 724
+        width: 120
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rectBlocks_13
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 724
+        width: 120
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rectBlocks_14
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 724
+        width: 120
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rectBlocks_15
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 724
+        width: 120
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rectBlocks_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 574
+        width: 120
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rectBlocks_17
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 574
+        width: 120
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rectBlocks_18
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 574
+        width: 120
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rectBlocks_19
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 574
+        width: 120
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rectBlocks_20
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 574
+        width: 120
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rectBlocks_21
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 574
+        width: 120
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rectBlocks_22
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 574
+        width: 120
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rectBlocks_23
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 574
+        width: 120
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rectBlocks_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 424
+        width: 120
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rectBlocks_25
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 424
+        width: 120
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rectBlocks_26
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 424
+        width: 120
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rectBlocks_27
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 424
+        width: 120
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rectBlocks_28
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 424
+        width: 120
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rectBlocks_29
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 424
+        width: 120
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rectBlocks_30
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 424
+        width: 120
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rectBlocks_31
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 424
+        width: 120
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rectBlocks_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 274
+        width: 120
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rectBlocks_33
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 274
+        width: 120
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rectBlocks_34
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 274
+        width: 120
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rectBlocks_35
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 274
+        width: 120
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rectBlocks_36
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 274
+        width: 120
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rectBlocks_37
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 274
+        width: 120
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rectBlocks_38
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 274
+        width: 120
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rectBlocks_39
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 274
+        width: 120
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rectBlocks_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 124
+        width: 120
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rectBlocks_41
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 124
+        width: 120
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rectBlocks_42
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 124
+        width: 120
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rectBlocks_43
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 124
+        width: 120
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rectBlocks_44
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 124
+        width: 120
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rectBlocks_45
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 124
+        width: 120
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rectBlocks_46
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 124
+        width: 120
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rectBlocks_47
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 124
+        width: 120
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

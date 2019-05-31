@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using System;
 
 public class UIManager : MonoBehaviour
 {
-
     private static UIManager _instance;
     public static UIManager Instacne
     {
@@ -18,16 +18,16 @@ public class UIManager : MonoBehaviour
     }
 
     private Transform parentRoot;
-    private float showWindowAnimTime = 3f;
+    private float showWindowAnimTime = 4f;
     private Dictionary<WindowType, GameObject> Dic = new Dictionary<WindowType, GameObject>();
 
-    public void ShowWindow(WindowType type)
+    public void ShowWindow(WindowType type,Action OnCompleteCallback=null)
     {
         GameObject WindowGo = null;
         if (!Dic.ContainsKey(type))
         {
             string path = "UIWindow/" + type.ToString();
-            Object obj = Resources.Load<Object>(path);
+            UnityEngine.Object obj = Resources.Load<UnityEngine.Object>(path);
             if (obj == null)
             {
                 Debug.LogError("error:path=" + path);
@@ -47,12 +47,13 @@ public class UIManager : MonoBehaviour
             if (WindowGo == null)
             {
                 Dic.Remove(type);
-                ShowWindow(type);
+                ShowWindow(type, OnCompleteCallback);
                 return;
             }
         }
+        MyGameManager.Instance.isCanSwipe = false; 
         SetWeiZhi_ZuoXia(WindowGo.transform);
-        EnterAnim(WindowGo.transform);
+        EnterAnim(WindowGo.transform, OnCompleteCallback);
     }
 
     public void HideWindow(WindowType type)
@@ -69,15 +70,19 @@ public class UIManager : MonoBehaviour
 #if UNITY_EDITOR
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            UIManager.Instacne.ShowWindow(WindowType.UIType0);
-        }
-
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            UIManager.Instacne.HideWindow(WindowType.UIType0);
+            ShowAndHideWindow(WindowType.UI_0);
         }
 #endif
 
+    }
+
+    public void ShowAndHideWindow(WindowType type)
+    {
+        UIManager.Instacne.ShowWindow(type);
+        StartCoroutine(Delay(showWindowAnimTime, delegate ()
+        {
+            HideWindow(type);
+        }));
     }
 
     public void DestroyGo(GameObject _go)
@@ -88,22 +93,32 @@ public class UIManager : MonoBehaviour
 
     private void SetWeiZhi_ZuoXia(Transform _transform)
     {
-        _transform.localPosition = new Vector3(-1000, -1000, 1000);
-        _transform.localEulerAngles = new Vector3(0, 80, -50);
+        _transform.localPosition = new Vector3(-800, -800, 1000);
+        _transform.localEulerAngles = new Vector3(0, 50, -20);
     }
 
-    private void EnterAnim(Transform _transform)
+    private void EnterAnim(Transform _transform,Action OnCompleteCallback = null)
     {
-        _transform.DOLocalMove(new Vector3(0, 0, 0), showWindowAnimTime);//.SetEase(Ease.InSine)
-        _transform.DOLocalRotate(new Vector3(0, 0, 0), showWindowAnimTime);
+        _transform.DOLocalRotate(new Vector3(20, 30,0), showWindowAnimTime);
+        _transform.DOLocalMove(new Vector3(0, 0, 0), showWindowAnimTime).SetEase(Ease.OutCirc).OnComplete(delegate ()
+        {
+            if (OnCompleteCallback != null) OnCompleteCallback();
+        });
+    }
+
+    IEnumerator Delay(float DelayTime,Action callback)
+    {
+        yield return new WaitForSeconds(DelayTime);
+        if (callback != null) callback();
     }
 
     private void OutAnim(Transform _transform)
     {
-        _transform.DOLocalMove(new Vector3(1000, 1000, 1000), showWindowAnimTime);
-        _transform.DOLocalRotate(new Vector3(0, 80, 50), showWindowAnimTime).OnComplete(delegate() 
+        _transform.DOLocalMove(new Vector3(1000, 1000, 1000), showWindowAnimTime).SetEase(Ease.InSine); ;
+        _transform.DOLocalRotate(new Vector3(0, 40, -10), showWindowAnimTime).OnComplete(delegate() 
         {
             DestroyGo(_transform.gameObject);
+            MyGameManager.Instance.isCanSwipe = true;
         });
     }
 
@@ -115,10 +130,10 @@ public class UIManager : MonoBehaviour
 
 public enum WindowType
 {
-    UIType0 = 0,
-    UIType1,
-    UIType2,
-    UIType3,
+    UI_0 = 0,
+    UI_1,
+    UI_2,
+    UI_3,
 
     Max,
 }

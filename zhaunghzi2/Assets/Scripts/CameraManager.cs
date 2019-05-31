@@ -22,24 +22,24 @@ public class CameraManager : MonoBehaviour
         TargetRotation = _TargetRotation;
     }
 
-    void LateUpdate()
-    {
-        if (Input.GetKeyDown(KeyCode.Alpha0))
-        {
+    //void LateUpdate()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.Alpha0))
+    //    {
             
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha8))
-        {
+    //    }
+    //    if (Input.GetKeyDown(KeyCode.Alpha8))
+    //    {
             
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha9))
-        {
+    //    }
+    //    if (Input.GetKeyDown(KeyCode.Alpha9))
+    //    {
             
-        }
+    //    }
 
-        transform.position = Vector3.Lerp(transform.position, TargetPosition, Time.deltaTime * smooth);
-        transform.eulerAngles = Vector3.Lerp(transform.eulerAngles, TargetRotation, Time.deltaTime * smooth);
-    }
+    //    transform.position = Vector3.Lerp(transform.position, TargetPosition, Time.deltaTime * smooth);
+    //    transform.eulerAngles = Vector3.Lerp(transform.eulerAngles, TargetRotation, Time.deltaTime * smooth);
+    //}
 
     public void ToJingTuo(int jingtuoIndex)
     {
