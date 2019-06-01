@@ -17,6 +17,8 @@ public class UIManager : MonoBehaviour
         parentRoot = this.transform;
     }
 
+    public Ease ease;
+
     private Transform parentRoot;
     private float showWindowAnimTime = 4f;
     private Dictionary<WindowType, GameObject> Dic = new Dictionary<WindowType, GameObject>();
@@ -65,16 +67,15 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-#if UNITY_EDITOR
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            ShowAndHideWindow(WindowType.UI_0);
-        }
-#endif
-
-    }
+//    private void Update()
+//    {
+//#if UNITY_EDITOR
+//        if (Input.GetKeyDown(KeyCode.Alpha1))
+//        {
+//            ShowAndHideWindow(WindowType.UI_0);
+//        }
+//#endif
+//    }
 
     public void ShowAndHideWindow(WindowType type)
     {
@@ -93,13 +94,16 @@ public class UIManager : MonoBehaviour
 
     private void SetWeiZhi_ZuoXia(Transform _transform)
     {
-        _transform.localPosition = new Vector3(-800, -800, 1000);
-        _transform.localEulerAngles = new Vector3(0, 50, -20);
+        _transform.localPosition = new Vector3(-600, -600, 1000);
+        //_transform.localEulerAngles = new Vector3(0, 50, -20);
+        _transform.localEulerAngles = new Vector3(-90, -90, -20);
     }
 
     private void EnterAnim(Transform _transform,Action OnCompleteCallback = null)
     {
-        _transform.DOLocalRotate(new Vector3(20, 30,0), showWindowAnimTime);
+        _transform.DOLocalRotate(new Vector3(-20, 20,0), showWindowAnimTime);
+        //List<Ease> tmpList = new List<Ease>() { Ease.OutCirc,Ease.OutBack,Ease.OutBounce,Ease.OutQuad };
+        //Ease tempease = tmpList[UnityEngine.Random.Range(0, tmpList.Count - 1)];
         _transform.DOLocalMove(new Vector3(0, 0, 0), showWindowAnimTime).SetEase(Ease.OutCirc).OnComplete(delegate ()
         {
             if (OnCompleteCallback != null) OnCompleteCallback();
@@ -114,8 +118,8 @@ public class UIManager : MonoBehaviour
 
     private void OutAnim(Transform _transform)
     {
-        _transform.DOLocalMove(new Vector3(1000, 1000, 1000), showWindowAnimTime).SetEase(Ease.InSine); ;
-        _transform.DOLocalRotate(new Vector3(0, 40, -10), showWindowAnimTime).OnComplete(delegate() 
+        _transform.DOLocalRotate(new Vector3(90, 90, -10), showWindowAnimTime);
+        _transform.DOLocalMove(new Vector3(1000, 1000, 1000), showWindowAnimTime).SetEase(Ease.InSine).OnComplete(delegate ()
         {
             DestroyGo(_transform.gameObject);
             MyGameManager.Instance.isCanSwipe = true;
