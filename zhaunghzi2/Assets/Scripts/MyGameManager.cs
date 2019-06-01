@@ -52,7 +52,7 @@ public class MyGameManager : MonoBehaviour
                 if (curSheXiangJiIndex >= 4) curSheXiangJiIndex = 0;
 
                 CameraManager.Instance.ToJingTuo(curSheXiangJiIndex);
-                StartCoroutine(DelayAction(0.5f, delegate () 
+                StartCoroutine(DelayAction(0f, delegate () 
                 {
                     UIManager.Instacne.ShowAndHideWindow((WindowType)curUIIndex);
                 }));
