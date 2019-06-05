@@ -41,6 +41,8 @@ public class MyGameManager : MonoBehaviour
             case EasyTouch.SwipeDirection.Up:
             case EasyTouch.SwipeDirection.UpLeft:
             case EasyTouch.SwipeDirection.DownLeft:
+                WholeRotateManager.Instance.SetTargetRotation(true);
+                break;
             case EasyTouch.SwipeDirection.Right:
             case EasyTouch.SwipeDirection.Down:
             case EasyTouch.SwipeDirection.DownRight:
@@ -51,7 +53,7 @@ public class MyGameManager : MonoBehaviour
                 //{
                 //    UIManager.Instacne.ShowAndHideWindow((WindowType)curUIIndex);
                 //}));
-                WholeRotateManager.Instance.SetTargetRotation();
+                WholeRotateManager.Instance.SetTargetRotation(false);
                 break;
         }
     }

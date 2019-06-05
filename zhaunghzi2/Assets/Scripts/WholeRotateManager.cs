@@ -14,9 +14,16 @@ public class WholeRotateManager : MonoBehaviour
     public float smooth = 5f;
     private Vector3 TargetRotation;
 
-    public void SetTargetRotation()
+    public void SetTargetRotation(bool isLeft)
     {
-        TargetRotation.y = TargetRotation.y + 90;
+        if (isLeft)
+        {
+            TargetRotation.y = TargetRotation.y + 90;
+        }
+        else
+        {
+            TargetRotation.y = TargetRotation.y - 90;
+        }
     }
 
     void LateUpdate()
@@ -32,6 +39,12 @@ public class WholeRotateManager : MonoBehaviour
             v.y = v.y - 360;
             transform.localEulerAngles = v;
             TargetRotation.y = TargetRotation.y - 360;
+        }
+        else if (v.y <= 0)
+        {
+            v.y = v.y + 360;
+            transform.localEulerAngles = v;
+            TargetRotation.y = TargetRotation.y + 360;
         }
     }
 }
