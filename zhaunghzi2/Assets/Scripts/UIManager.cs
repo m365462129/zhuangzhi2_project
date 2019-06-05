@@ -102,7 +102,7 @@ public class UIManager : MonoBehaviour
     private void EnterAnim(Transform _transform,Action OnCompleteCallback = null)
     {
         _transform.DOLocalRotate(new Vector3(-20, 20,0), showWindowAnimTime);
-        //List<Ease> tmpList = new List<Ease>() { Ease.OutCirc,Ease.OutBack,Ease.OutBounce,Ease.OutQuad };
+        //List<Ease> tmpList = new List<Ease>() { Ease.OutCirc, Ease.OutBack, Ease.OutBounce, Ease.OutQuad };
         //Ease tempease = tmpList[UnityEngine.Random.Range(0, tmpList.Count - 1)];
         _transform.DOLocalMove(new Vector3(0, 0, 0), showWindowAnimTime).SetEase(Ease.OutCirc).OnComplete(delegate ()
         {

@@ -51,7 +51,7 @@ public class MyGameManager : MonoBehaviour
                 if (curUIIndex >= (int)WindowType.Max) curUIIndex = 0;
                 if (curSheXiangJiIndex >= 4) curSheXiangJiIndex = 0;
 
-                CameraManager.Instance.ToJingTuo(curSheXiangJiIndex);
+                //CameraManager.Instance.ToJingTuo(curSheXiangJiIndex);
                 StartCoroutine(DelayAction(0f, delegate () 
                 {
                     UIManager.Instacne.ShowAndHideWindow((WindowType)curUIIndex);
