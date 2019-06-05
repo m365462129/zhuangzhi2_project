@@ -45,17 +45,13 @@ public class MyGameManager : MonoBehaviour
             case EasyTouch.SwipeDirection.Down:
             case EasyTouch.SwipeDirection.DownRight:
             case EasyTouch.SwipeDirection.UpRight:
-                curUIIndex++;
-                curSheXiangJiIndex++;
-
-                if (curUIIndex >= (int)WindowType.Max) curUIIndex = 0;
-                if (curSheXiangJiIndex >= 4) curSheXiangJiIndex = 0;
-
-                //CameraManager.Instance.ToJingTuo(curSheXiangJiIndex);
-                StartCoroutine(DelayAction(0f, delegate () 
-                {
-                    UIManager.Instacne.ShowAndHideWindow((WindowType)curUIIndex);
-                }));
+                //curUIIndex++;
+                //if (curUIIndex >= (int)WindowType.Max) curUIIndex = 0;
+                //StartCoroutine(DelayAction(0f, delegate () 
+                //{
+                //    UIManager.Instacne.ShowAndHideWindow((WindowType)curUIIndex);
+                //}));
+                WholeRotateManager.Instance.SetTargetRotation();
                 break;
         }
     }

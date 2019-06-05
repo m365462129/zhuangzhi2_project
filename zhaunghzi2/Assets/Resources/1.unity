@@ -15716,7 +15716,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1686931717}
   - component: {fileID: 1686931718}
-  - component: {fileID: 1686931719}
+  - component: {fileID: 1686931720}
   m_Layer: 0
   m_Name: GameObject (1)
   m_TagString: Untagged
@@ -15731,7 +15731,7 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1686931716}
-  m_LocalRotation: {x: -0.13126393, y: 0.7971968, z: -0.1872892, w: -0.55872166}
+  m_LocalRotation: {x: -0.13126306, y: 0.7971969, z: -0.18728915, w: -0.5587217}
   m_LocalPosition: {x: -0.78, y: 6.4, z: -20.4}
   m_LocalScale: {x: 7.929355, y: 7.9293666, z: 7.929369}
   m_Children:
@@ -15944,7 +15944,7 @@ Transform:
   - {fileID: 1646795999}
   m_Father: {fileID: 0}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 26.442001, y: 3130.05, z: 0}
+  m_LocalEulerAnglesHint: {x: 26.442001, y: 250.05, z: 0}
 --- !u!95 &1686931718
 Animator:
   serializedVersion: 3
@@ -15962,7 +15962,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &1686931719
+--- !u!114 &1686931720
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -15970,14 +15970,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1686931716}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17878c14646f9d34e84d875e9f6c1b90, type: 3}
+  m_Script: {fileID: 11500000, guid: cc4d48b21469ce54b93b0b9684c3d9e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsRange: 0
-  IsOnlyY: 1
-  rotateX: 0
-  rotateY: 1
-  rotateZ: 0
+  smooth: 4
 --- !u!1 &1697615046
 GameObject:
   m_ObjectHideFlags: 0
