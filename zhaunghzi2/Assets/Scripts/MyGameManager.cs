@@ -35,6 +35,10 @@ public class MyGameManager : MonoBehaviour
     {
         Debug.LogError("gesture.swipe=" + gesture.swipe);
         if (!isCanSwipe) return;
+
+        curUIIndex++;
+        if (curUIIndex >= (int)WindowType.Max) curUIIndex = 0;
+        LoadMoive(curUIIndex);
         switch (gesture.swipe)
         {
             case EasyTouch.SwipeDirection.Left:
@@ -47,8 +51,7 @@ public class MyGameManager : MonoBehaviour
             case EasyTouch.SwipeDirection.Down:
             case EasyTouch.SwipeDirection.DownRight:
             case EasyTouch.SwipeDirection.UpRight:
-                //curUIIndex++;
-                //if (curUIIndex >= (int)WindowType.Max) curUIIndex = 0;
+               
                 //StartCoroutine(DelayAction(0f, delegate () 
                 //{
                 //    UIManager.Instacne.ShowAndHideWindow((WindowType)curUIIndex);
@@ -56,6 +59,7 @@ public class MyGameManager : MonoBehaviour
                 WholeRotateManager.Instance.SetTargetRotation(false);
                 break;
         }
+
     }
 
 
@@ -63,5 +67,19 @@ public class MyGameManager : MonoBehaviour
     {
         yield return new WaitForSeconds(delayTime);
         if (action!= null) action();
+    }
+
+
+
+
+    public UnityEngine.UI.RawImage rawImage;
+    public void LoadMoive(int indexMovie = 1)
+    {
+        Debug.LogError("111111");
+        rawImage.gameObject.SetActive(true);
+        MovieTexture movieTexture = Resources.Load("Dideo_"+ indexMovie) as MovieTexture;
+        rawImage.texture = movieTexture;
+        movieTexture.Stop();
+        movieTexture.Play();
     }
 }
