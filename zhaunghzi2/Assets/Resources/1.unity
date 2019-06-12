@@ -4953,10 +4953,6 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 1422933572046352, guid: 39e81446dcd53b442b0ae167d0465a1c, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 39e81446dcd53b442b0ae167d0465a1c, type: 2}
   m_IsPrefabParent: 0
@@ -19247,29 +19243,6 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224412051253689170, guid: 39e81446dcd53b442b0ae167d0465a1c,
     type: 2}
   m_PrefabInternal: {fileID: 628911243}
---- !u!114 &1990560874
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1990560872}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1dbf0d6212efe134d8e8e83feaa4f5f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Speed: 2
---- !u!225 &1990560875
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1990560872}
-  m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!4 &1991563516 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 44befb7b4c54c5e4482d849a5a9f6ec9, type: 3}
