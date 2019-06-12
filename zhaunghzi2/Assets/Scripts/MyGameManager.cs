@@ -15,7 +15,13 @@ public class MyGameManager : MonoBehaviour
     public bool isCanSwipe = true;
     private int curUIIndex = -1;//ui的Index
     private int curSheXiangJiIndex = 0;//摄像机的index
+    public GameObject TipUI;
+    public GameObject AimedUI;
 
+
+    private RaycastHit hit;
+    private Ray ray;
+    private Vector3 PointRay;
     private void Awake()
     {
         _instance = this;
@@ -33,12 +39,8 @@ public class MyGameManager : MonoBehaviour
 
     private void On_SwipeEnd(Gesture gesture)
     {
-        Debug.LogError("gesture.swipe=" + gesture.swipe);
         if (!isCanSwipe) return;
 
-        curUIIndex++;
-        if (curUIIndex >= (int)WindowType.Max) curUIIndex = 0;
-        LoadMoive(curUIIndex);
         switch (gesture.swipe)
         {
             case EasyTouch.SwipeDirection.Left:
@@ -51,11 +53,6 @@ public class MyGameManager : MonoBehaviour
             case EasyTouch.SwipeDirection.Down:
             case EasyTouch.SwipeDirection.DownRight:
             case EasyTouch.SwipeDirection.UpRight:
-               
-                //StartCoroutine(DelayAction(0f, delegate () 
-                //{
-                //    UIManager.Instacne.ShowAndHideWindow((WindowType)curUIIndex);
-                //}));
                 WholeRotateManager.Instance.SetTargetRotation(false);
                 break;
         }
@@ -69,17 +66,89 @@ public class MyGameManager : MonoBehaviour
         if (action!= null) action();
     }
 
+    Transform LastHit = null;
+    private void OnGUI()
+    {
+        if (isCanSwipe)
+        {
+            Vector3 v = new Vector3(Screen.width / 2, Screen.height / 2, 300f);
+            ray = Camera.main.ScreenPointToRay(v);
+            if (Physics.Raycast(ray, out hit))
+            {
+                if (hit.transform.tag == "Target")
+                {
+                    if (LastHit != hit.transform)
+                    {
+                        LastHit = hit.transform;
+                        int tmpIndex = -1;
+                        int.TryParse(hit.transform.name, out tmpIndex);
+                        if (tmpIndex >= 0) LoadMoive(tmpIndex);
+                    }
+                }
+            }
+            else
+            {
+                if (hit.transform == null) LastHit = null;
+            }
+        }
+
+
+    }
+
+
+
 
 
 
     public UnityEngine.UI.RawImage rawImage;
     public void LoadMoive(int indexMovie = 1)
     {
-        Debug.LogError("111111");
+        //Debug.LogError("111111");
+        isCanSwipe = false;
         rawImage.gameObject.SetActive(true);
         MovieTexture movieTexture = Resources.Load("Dideo_"+ indexMovie) as MovieTexture;
         rawImage.texture = movieTexture;
         movieTexture.Stop();
         movieTexture.Play();
+
+        SetState_TipUI(false);
+
+        StartCoroutine(DelayAction(10f, delegate ()
+        {
+            isCanSwipe = true;
+            movieTexture.Stop();
+            rawImage.gameObject.SetActive(false);
+        }));
     }
+
+
+
+    public void SetState_TipUI(bool isShow)
+    {
+        TipUI.SetActive(isShow);
+    }
+
+    public void SetState_AimedUI(bool isShow)
+    {
+        AimedUI.SetActive(isShow);
+    }
+
+
+
+    private int HuaDongType = 1;//0插值滑动    1固定滑动
+    public bool IsChaZhiHuaDong()
+    {
+        return isCanSwipe && HuaDongType == 0;
+    }
+
+    public bool IsGuDingHuaDong()
+    {
+        return isCanSwipe && HuaDongType == 1;
+    }
+}
+
+public enum HuaDongType
+{
+    ChaZhi = 0,
+    GuDing,
 }

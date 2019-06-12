@@ -22,6 +22,7 @@ public class UIManager : MonoBehaviour
     private Transform parentRoot;
     private float showWindowAnimTime = 4f;
     private Dictionary<WindowType, GameObject> Dic = new Dictionary<WindowType, GameObject>();
+    public GameObject TipUI;
 
     public void ShowWindow(WindowType type,Action OnCompleteCallback=null)
     {
@@ -67,15 +68,6 @@ public class UIManager : MonoBehaviour
         }
     }
 
-//    private void Update()
-//    {
-//#if UNITY_EDITOR
-//        if (Input.GetKeyDown(KeyCode.Alpha1))
-//        {
-//            ShowAndHideWindow(WindowType.UI_0);
-//        }
-//#endif
-//    }
 
     public void ShowAndHideWindow(WindowType type)
     {
@@ -138,6 +130,9 @@ public enum WindowType
     UI_1,
     UI_2,
     UI_3,
+
+    UI_Max,
+
 
     Max,
 }

@@ -378,7 +378,9 @@
     <Compile Include="Assets\PostProcessing\Runtime\Utils\MaterialFactory.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
     <Compile Include="Assets\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
+    <Compile Include="Assets\Scripts\AimedUI.cs" />
     <Compile Include="Assets\Scripts\CameraManager.cs" />
+    <Compile Include="Assets\Scripts\Flash.cs" />
     <Compile Include="Assets\Scripts\MyGameManager.cs" />
     <Compile Include="Assets\Scripts\rotate.cs" />
     <Compile Include="Assets\Scripts\SomeSetting.cs" />
@@ -452,6 +454,7 @@
     <None Include="Assets\PostProcessing\Utilities\CustomMotionTexture\Shaders\CustomMotionVectorTexture.shader" />
     <None Include="Assets\Resources\VideoShader.shader" />
     <None Include="Assets\cgjoy-effect_Rim.shader" />
+    <None Include="Assets\光球\cgwell_Fresnel_Opaque.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

@@ -441,6 +441,7 @@
     <None Include="Assets\PostProcessing\Utilities\CustomMotionTexture\Shaders\CustomMotionVectorTexture.shader" />
     <None Include="Assets\Resources\VideoShader.shader" />
     <None Include="Assets\cgjoy-effect_Rim.shader" />
+    <None Include="Assets\光球\cgwell_Fresnel_Opaque.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
