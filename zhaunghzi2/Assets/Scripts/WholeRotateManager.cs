@@ -77,7 +77,9 @@ public class WholeRotateManager : MonoBehaviour
                 v3.y = x;
                 transform.eulerAngles = v3;
                 LastSmoothTime = 0;
+                MyGameManager.Instance.SetState_TipUI(false);
             }
+            
         }
     }
 
