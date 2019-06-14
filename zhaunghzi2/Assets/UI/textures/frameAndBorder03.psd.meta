@@ -101,7 +101,7 @@ TextureImporter:
         width: 4096
         height: 2128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -110,13 +110,13 @@ TextureImporter:
       name: frameAndBorder03_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 4096
-        height: 1933
+        x: 1563
+        y: 239
+        width: 1614
+        height: 330
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 8, y: 0, z: 0, w: 16}
       outline: []
       physicsShape: []
       tessellationDetail: 0
