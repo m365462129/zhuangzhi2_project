@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class MyGameManager : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class MyGameManager : MonoBehaviour
     public bool isCanSwipe = true;
     public GameObject TipUI;
     public GameObject AimedUI;
+    public GameObject disappear;
 
 
 
@@ -63,12 +65,14 @@ public class MyGameManager : MonoBehaviour
     }
 
     public UnityEngine.UI.RawImage rawImage;
+    public Ease ease;
     public void LoadMoive(int indexMovie = 1)
     {
         //Debug.LogError("111111");
         isCanSwipe = false;
         rawImage.gameObject.SetActive(true);
         MovieTexture movieTexture = Resources.Load("Dideo_"+ indexMovie) as MovieTexture;
+        rawImage.transform.localScale = Vector3.one;
         rawImage.texture = movieTexture;
         movieTexture.Stop();
         movieTexture.Play();
@@ -79,9 +83,43 @@ public class MyGameManager : MonoBehaviour
         {
             isCanSwipe = true;
             movieTexture.Stop();
-            rawImage.gameObject.SetActive(false);
+
+
+            
+        }));
+
+
+
+        disappear.gameObject.SetActive(false);
+        StartCoroutine(DelayAction(9.5f, delegate ()
+        {
+            rawImage.transform.DOScaleY(0f, 0.3f).OnComplete(delegate() 
+            {
+                rawImage.gameObject.SetActive(false);
+            });
+
+            StartCoroutine(DelayAction(0.2f, delegate ()
+             {
+                 disappear.gameObject.SetActive(true);
+                 disappear.transform.DOScale(0.1f,0.3f).SetEase(ease).OnComplete(delegate() 
+                 {
+                     disappear.gameObject.SetActive(false);
+                     disappear.transform.localScale = Vector3.one;
+                 });
+             }));
+
         }));
     }
+
+    IEnumerator dddd()
+    {
+        yield return new WaitForSeconds(9f);
+        rawImage.transform.DOScaleY(0, 0.5f);
+        //yield return new WaitForSeconds(0.2f);
+        //
+    }
+
+
 
 
 
