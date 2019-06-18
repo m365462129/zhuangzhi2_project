@@ -15,6 +15,13 @@ public class Flash : MonoBehaviour
         al = canvasGroup.alpha;
     }
 
+    private void OnEnable()
+    {
+        al = 1f;
+        canvasGroup.alpha = al;
+        isAdd = false;
+    }
+
     void Update()
     {
         if (isAdd)

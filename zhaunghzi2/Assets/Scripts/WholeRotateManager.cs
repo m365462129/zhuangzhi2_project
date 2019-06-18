@@ -10,7 +10,7 @@ public class WholeRotateManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-        TargetRotation = transform.localEulerAngles;
+        TargetRotation = transform.localEulerAngles;//26.442,250.05，0
         MyGameManagerInstance = MyGameManager.Instance;
     }
 
@@ -20,17 +20,17 @@ public class WholeRotateManager : MonoBehaviour
 
     public void SetTargetRotation(bool isLeft)
     {
-        if (MyGameManagerInstance.IsChaZhiHuaDong())
-        {
-            if (isLeft)
-            {
-                TargetRotation.y = TargetRotation.y + 90;
-            }
-            else
-            {
-                TargetRotation.y = TargetRotation.y - 90;
-            }
-        }
+        //if (MyGameManagerInstance.IsChaZhiHuaDong())
+        //{
+        //    if (isLeft)
+        //    {
+        //        TargetRotation.y = TargetRotation.y + 90;
+        //    }
+        //    else
+        //    {
+        //        TargetRotation.y = TargetRotation.y - 90;
+        //    }
+        //}
     }
 
 
@@ -63,19 +63,46 @@ public class WholeRotateManager : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
-                x = transform.eulerAngles.y;
-                y = transform.eulerAngles.x;
+                Vector3 vv = transform.eulerAngles;
+
+                if (vv.y==0)
+                {
+                    vv.z = 0;
+                    transform.eulerAngles = vv;
+                    x = transform.eulerAngles.y;
+                    y = transform.eulerAngles.x;
+                } 
             }
 
             if (Input.GetMouseButton(0))
             {
-                x -= Input.GetAxis("Mouse X") * smooth;
-                y -= Input.GetAxis("Mouse Y") * smooth;
-                y = ClampAngle(y, yMinLimit,yMaxLimit);
                 Vector3 v3 = transform.eulerAngles;
+                v3.z = 0;
+                transform.eulerAngles = v3;
+
+
+                x -= Input.GetAxis("Mouse X") * smooth;
+                if (x >= 360)
+                    x -= 360;
+                else if (x<=0)
+                    x += 360;
+
+                y -= Input.GetAxis("Mouse Y") * smooth;
+                //y = ClampAngle(y, yMinLimit, yMaxLimit);
+                if (y >= 360)
+                    y -= 360;
+                else if (y <= 0)
+                    y += 360;
+
+
+                v3.z = 0;
                 v3.x = y;
                 v3.y = x;
+
+
+
                 transform.eulerAngles = v3;
+                //Debug.LogError("==v3="+ v3);
                 LastSmoothTime = 0;
                 MyGameManager.Instance.SetState_TipUI(false);
             }
@@ -98,21 +125,21 @@ public class WholeRotateManager : MonoBehaviour
     }
 
 
-    float ClampAngle(float angle)
-    {
-        if (angle > 180f)
-            angle -= 360f;
+    //float ClampAngle(float angle)
+    //{
+    //    if (angle > 180f)
+    //        angle -= 360f;
 
-        return angle;
-    }
+    //    return angle;
+    //}
 
-    float ClampAngle(float angle, float min, float max)
-    {
-        if (angle > 180f)
-            angle -= 360f;
+    //float ClampAngle(float angle, float min, float max)
+    //{
+    //    if (angle > 180f)
+    //        angle -= 360f;
 
-        return Mathf.Clamp(angle, min, max);
-    }
+    //    return Mathf.Clamp(angle, min, max);
+    //}
 
 
 }

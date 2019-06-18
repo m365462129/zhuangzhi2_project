@@ -442,6 +442,7 @@
     <None Include="Assets\Resources\VideoShader.shader" />
     <None Include="Assets\cgjoy-effect_Rim.shader" />
     <None Include="Assets\光球\cgwell_Fresnel_Opaque.shader" />
+    <None Include="Assets\闪光\shanguang.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

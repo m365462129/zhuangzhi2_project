@@ -22,7 +22,6 @@ public class UIManager : MonoBehaviour
     private Transform parentRoot;
     private float showWindowAnimTime = 4f;
     private Dictionary<WindowType, GameObject> Dic = new Dictionary<WindowType, GameObject>();
-    public GameObject TipUI;
 
     public void ShowWindow(WindowType type,Action OnCompleteCallback=null)
     {
