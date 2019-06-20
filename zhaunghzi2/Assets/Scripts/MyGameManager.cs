@@ -1,9 +1,9 @@
 ﻿using HedgehogTeam.EasyTouch;
 using System;
 using System.Collections;
-//using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using System.Collections.Generic;
 
 public class MyGameManager : MonoBehaviour
 {
@@ -17,6 +17,7 @@ public class MyGameManager : MonoBehaviour
     public GameObject TipUI;
     public GameObject AimedUI;
     public GameObject disappear;
+    public List<MovieTexture> MovieTextureList = new List<MovieTexture>();
 
     private void Awake()
     {
@@ -74,7 +75,7 @@ public class MyGameManager : MonoBehaviour
     {
         isCanSwipe = false;
         rawImage.gameObject.SetActive(true);
-        UnityEngine.MovieTexture movieTexture = Resources.Load("Dideo_" + indexMovie) as UnityEngine.MovieTexture;
+        UnityEngine.MovieTexture movieTexture = MovieTextureList[indexMovie]; //Resources.Load("Dideo_" + indexMovie) as UnityEngine.MovieTexture;
         rawImage.transform.localScale = Vector3.one;
         rawImage.texture = movieTexture;
         movieTexture.Stop();
