@@ -15,9 +15,7 @@ public class WholeRotateManager : MonoBehaviour
     }
 
     public float smooth = 5f;
-
     private Vector3 TargetRotation;
-
     public void SetTargetRotation(bool isLeft)
     {
         //if (MyGameManagerInstance.IsChaZhiHuaDong())
@@ -42,6 +40,7 @@ public class WholeRotateManager : MonoBehaviour
     float LastSmoothTime = 0;
     void LateUpdate()
     {
+        return;
         if (MyGameManagerInstance.IsChaZhiHuaDong()) //插值滑动
         {
             //Vector3 v = Vector3.Lerp(transform.localEulerAngles, TargetRotation, Time.deltaTime * smooth);
@@ -80,6 +79,13 @@ public class WholeRotateManager : MonoBehaviour
                 v3.z = 0;
                 transform.eulerAngles = v3;
 
+                //Vector2 v2 = Input.GetTouch(0).deltaPosition;
+                //Debug.LogError("===v2="+v2);
+#if UNITY_EDITOR
+
+#else
+
+#endif
 
                 x -= Input.GetAxis("Mouse X") * smooth;
                 if (x >= 360)
@@ -110,6 +116,35 @@ public class WholeRotateManager : MonoBehaviour
         }
     }
 
+    public void SetState_ChangJing(bool isShow)
+    {
+        gameObject.SetActive(isShow);
+    }
+
+    public void EasyTouchOn_Swipe(Vector2 v2)
+    {
+        Vector3 v3 = transform.eulerAngles;
+
+        x -= v2.x * smooth;
+        if (x >= 360)
+            x -= 360;
+        else if (x <= 0)
+            x += 360;
+
+        y -= v2.y * smooth;
+        if (y >= 360)
+            y -= 360;
+        else if (y <= 0)
+            y += 360;
+
+        v3.z = 0;
+        v3.x = y;
+        v3.y = x;
+        transform.eulerAngles = v3;
+        LastSmoothTime = 0;
+        MyGameManagerInstance.SetState_TipUI(false);
+    }
+
     private void Update()
     {
         if (MyGameManagerInstance.isCanSwipe)
@@ -124,22 +159,15 @@ public class WholeRotateManager : MonoBehaviour
         }
     }
 
-
-    //float ClampAngle(float angle)
-    //{
-    //    if (angle > 180f)
-    //        angle -= 360f;
-
-    //    return angle;
-    //}
-
-    //float ClampAngle(float angle, float min, float max)
-    //{
-    //    if (angle > 180f)
-    //        angle -= 360f;
-
-    //    return Mathf.Clamp(angle, min, max);
-    //}
-
-
+    public List<GameObject> HideList = new List<GameObject>();
+    public void Hide(bool isHide)
+    {
+        for (int i = 0; i < HideList.Count; i++)
+        {
+            if (HideList[i] != null)
+            {
+                HideList[i].SetActive(isHide);
+            }
+        }
+    }
 }

@@ -1,7 +1,7 @@
 ﻿using HedgehogTeam.EasyTouch;
 using System;
 using System.Collections;
-using System.Collections.Generic;
+//using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
@@ -18,8 +18,6 @@ public class MyGameManager : MonoBehaviour
     public GameObject AimedUI;
     public GameObject disappear;
 
-
-
     private void Awake()
     {
         _instance = this;
@@ -27,35 +25,41 @@ public class MyGameManager : MonoBehaviour
 
     private void OnEnable()
     {
-        EasyTouch.On_SwipeEnd += On_SwipeEnd;
+        //EasyTouch.On_SwipeEnd += On_SwipeEnd;
+        EasyTouch.On_Swipe += On_Swipe;
     }
 
     private void OnDisable()
     {
-        EasyTouch.On_SwipeEnd -= On_SwipeEnd;
+        //EasyTouch.On_SwipeEnd -= On_SwipeEnd;
+        EasyTouch.On_Swipe -= On_Swipe;
     }
 
-    private void On_SwipeEnd(Gesture gesture)
+    private void On_Swipe(Gesture gesture)
     {
         if (!isCanSwipe) return;
-
-        switch (gesture.swipe)
-        {
-            case EasyTouch.SwipeDirection.Left:
-            case EasyTouch.SwipeDirection.Up:
-            case EasyTouch.SwipeDirection.UpLeft:
-            case EasyTouch.SwipeDirection.DownLeft:
-                WholeRotateManager.Instance.SetTargetRotation(true);
-                break;
-            case EasyTouch.SwipeDirection.Right:
-            case EasyTouch.SwipeDirection.Down:
-            case EasyTouch.SwipeDirection.DownRight:
-            case EasyTouch.SwipeDirection.UpRight:
-                WholeRotateManager.Instance.SetTargetRotation(false);
-                break;
-        }
-
+        WholeRotateManager.Instance.EasyTouchOn_Swipe(gesture.deltaPosition);
     }
+
+    //private void On_SwipeEnd(Gesture gesture)
+    //{
+    //    if (!isCanSwipe) return;
+    //    switch (gesture.swipe)
+    //    {
+    //        case EasyTouch.SwipeDirection.Left:
+    //        case EasyTouch.SwipeDirection.Up:
+    //        case EasyTouch.SwipeDirection.UpLeft:
+    //        case EasyTouch.SwipeDirection.DownLeft:
+    //            WholeRotateManager.Instance.SetTargetRotation(true);
+    //            break;
+    //        case EasyTouch.SwipeDirection.Right:
+    //        case EasyTouch.SwipeDirection.Down:
+    //        case EasyTouch.SwipeDirection.DownRight:
+    //        case EasyTouch.SwipeDirection.UpRight:
+    //            WholeRotateManager.Instance.SetTargetRotation(false);
+    //            break;
+    //    }
+    //}
 
 
     public IEnumerator DelayAction(float delayTime,Action action)
@@ -68,10 +72,9 @@ public class MyGameManager : MonoBehaviour
     public Ease ease;
     public void LoadMoive(int indexMovie = 1)
     {
-        //Debug.LogError("111111");
         isCanSwipe = false;
         rawImage.gameObject.SetActive(true);
-        MovieTexture movieTexture = Resources.Load("Dideo_"+ indexMovie) as MovieTexture;
+        UnityEngine.MovieTexture movieTexture = Resources.Load("Dideo_" + indexMovie) as UnityEngine.MovieTexture;
         rawImage.transform.localScale = Vector3.one;
         rawImage.texture = movieTexture;
         movieTexture.Stop();
@@ -83,17 +86,23 @@ public class MyGameManager : MonoBehaviour
         {
             isCanSwipe = true;
             movieTexture.Stop();
-
-
-            
         }));
 
+        StartCoroutine(DelayAction(0.2f, delegate ()
+        {
+            WholeRotateManager.Instance.Hide(false);
+        }));
+        StartCoroutine(DelayAction(9f, delegate ()
+        {
+            WholeRotateManager.Instance.Hide(true);
+        }));
 
 
         disappear.gameObject.SetActive(false);
         StartCoroutine(DelayAction(9.5f, delegate ()
         {
-            rawImage.transform.DOScaleY(0f, 0.3f).OnComplete(delegate() 
+
+            rawImage.transform.DOScaleY(0f, 0.3f).OnComplete(delegate ()
             {
                 rawImage.gameObject.SetActive(false);
             });
@@ -101,27 +110,15 @@ public class MyGameManager : MonoBehaviour
             StartCoroutine(DelayAction(0.2f, delegate ()
              {
                  disappear.gameObject.SetActive(true);
-                 disappear.transform.DOScale(0.1f,0.3f).SetEase(ease).OnComplete(delegate() 
-                 {
-                     disappear.gameObject.SetActive(false);
-                     disappear.transform.localScale = Vector3.one;
-                 });
+                 disappear.transform.DOScale(0.1f, 0.3f).SetEase(ease).OnComplete(delegate ()
+                  {
+                      disappear.gameObject.SetActive(false);
+                      disappear.transform.localScale = Vector3.one;
+                  });
              }));
 
         }));
     }
-
-    IEnumerator dddd()
-    {
-        yield return new WaitForSeconds(9f);
-        rawImage.transform.DOScaleY(0, 0.5f);
-        //yield return new WaitForSeconds(0.2f);
-        //
-    }
-
-
-
-
 
     public void SetState_TipUI(bool isShow)
     {
